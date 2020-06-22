@@ -1,0 +1,26 @@
+<ifmodule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+
+    ExpiresByType image/jpeg "access plus 1 months"
+    ExpiresByType application/font-woff "access plus 1 year"
+</ifmodule>
+
+# use mod_rewrite for pretty URL support
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# otherwise forward the request to index.php
+RewriteRule . index.php
+
+<ifmodule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html 
+    AddOutputFilterByType DEFLATE text/plain 
+    AddOutputFilterByType DEFLATE text/xml 
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript 
+    AddOutputFilterByType DEFLATE application/json 
+    AddOutputFilterByType DEFLATE application/javascript 
+    AddOutputFilterByType DEFLATE application/x-javascript
+</ifmodule>

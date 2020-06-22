@@ -1,0 +1,24 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "module": "system",
+        "target": "es6",
+        "removeComments": true,
+        "noImplicitAny": false,
+        "declaration": true,        
+        "outFile": "../../dist/lever.js"
+    },
+    "files": [
+        "../../../../layouts/assets/dist/js/common.d.ts",
+        "../../../../layouts/assets/dist/js/mfBaseDragDrop.d.ts",
+        "../../../../layouts/assets/dist/js/vwin.d.ts",
+        "../../../../layouts/assets/dist/js/ContextMenu.d.ts",
+        "DataSet.ts",
+        "Tree.ts",
+        "Nodes.ts",
+        "BaseNode.ts",
+        "ChapterNode.ts",
+        "ArticleNode.ts",
+        "index.ts"
+    ]
+}

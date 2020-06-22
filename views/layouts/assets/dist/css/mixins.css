@@ -1,0 +1,13 @@
+/* 
+    Created on : 11.02.2020, 12:36:49
+    Author     : ssiunov
+*/
+.noselect {
+  /*-webkit-touch-callout: none;*/
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}

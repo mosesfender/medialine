@@ -1,0 +1,93 @@
+/* 
+    Created on : 11.02.2020, 12:36:49
+    Author     : ssiunov
+*/
+
+.media(@screen, @rules) {
+    @tablet-area: 750px;
+    @desktop-area: 970px;
+
+    & when (@screen = wide) {
+        @media (min-width: 1210px) {
+            @rules();
+        }
+    }
+
+    & when (@screen = desktop) {
+        @media (max-width: 1209px) {
+            @rules();
+        }
+    }
+
+    & when (@screen = tablet) {
+        @media (max-width: 1023px) {
+            @rules();
+        }
+    }
+
+    & when (@screen = mobile) {
+        @media (max-width: 767px) {
+            @rules();
+        }
+    }
+
+    & when (@screen = mobile-sm) {
+        @media (max-width: 479px) {
+            @rules();
+        }
+    }
+}
+
+.masked(@url){
+    -webkit-mask-image: url(@url);
+    mask-image: url(@url);
+}
+
+.noselect{
+    /*-webkit-touch-callout: none;*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+.userSelect(@val: none){
+    /*-webkit-touch-callout: none;*/
+    -webkit-user-select: @val;
+    -moz-user-select: @val;
+    -o-user-select: @val;
+    -ms-user-select: @val;
+    -khtml-user-select: @val;
+    user-select: @val;
+}
+
+.border-radius(@val: 6px){
+    -webkit-border-radius: @val;
+    -moz-border-radius: @val;
+    border-radius: @val;
+}
+
+.border-radii(@radiusTopRight: 6px, @radiusBottomRight: 6px, @radiusBottomLeft: 6px, @radiusTopLeft: 6px) {
+    -webkit-border-top-left-radius: @radiusTopLeft;
+    -webkit-border-top-right-radius: @radiusTopRight;
+    -webkit-border-bottom-right-radius: @radiusBottomRight;
+    -webkit-border-bottom-left-radius: @radiusBottomLeft;
+    -moz-border-radius-topleft: @radiusTopLeft;
+    -moz-border-radius-topright: @radiusTopRight;
+    -moz-border-radius-bottomright: @radiusBottomRight;
+    -moz-border-radius-bottomleft: @radiusBottomLeft;
+    border-top-left-radius: @radiusTopLeft;
+    border-top-right-radius: @radiusTopRight;
+    border-bottom-right-radius: @radiusBottomRight;
+    border-bottom-left-radius: @radiusBottomLeft;
+}
+
+.transition(@val){
+    transition: @val;
+    -moz-transition: @val;
+    -ms-transition: @val;
+    -o-transition: @val;
+    -webkit-transition: @val;
+}

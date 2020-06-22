@@ -1,0 +1,22 @@
+.catalog ul {
+  list-style: circle;
+  padding-left: 12px;
+}
+.catalog ul li span {
+  cursor: pointer;
+  color: #066;
+}
+.catalog ul li span:hover {
+  color: #008e8e;
+}
+.arts ul {
+  list-style: square;
+  padding-left: 12px;
+}
+.arts ul li span {
+  cursor: pointer;
+  color: #560000;
+}
+.arts ul li span:hover {
+  color: #750000;
+}

@@ -1,0 +1,16 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "module": "system",
+        "target": "es6",
+        "removeComments": true,
+        "noImplicitAny": false,
+        "declaration": true,        
+        "outFile": "../../../../assets/dist/js/Catalog.js"
+    },
+    "files": [
+        "../../../../assets/dist/js/common.d.ts",
+        "Catalog.ts",
+        "index.ts"
+    ]
+}
